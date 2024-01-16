@@ -1,0 +1,18 @@
+/* Style et disposition des pages */
+
+/* Page entière */
+
+html
+    {
+        font-size: 100%; 
+        tab-size: 4;
+    }
+
+
+/* Titres */
+
+
+h1
+    {
+    color: red;
+    }
