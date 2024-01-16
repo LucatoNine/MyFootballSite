@@ -3,6 +3,13 @@
 
     <body>
 
+        <nav>
+            <a href="{% url 'home-site' %}">Accueil</a>
+            <a href="{% url 'about-site' %}">Nous connaître</a>
+            <a href="{% url 'project-site' %}">Notre projet</a>
+            <a href="{% url 'contact-site' %}">Nous contacter</a>
+        </nav>
+        
         {% block content %}{% endblock %}
 
     </body>
