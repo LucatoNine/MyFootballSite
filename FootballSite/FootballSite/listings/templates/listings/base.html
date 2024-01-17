@@ -1,5 +1,6 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,12 +11,13 @@
 
     <body>
         <header>
-            <nav>
+            <div id="MySideNav" class="sidenav">
                 <a class="navbar" href="{% url 'home-site' %}">Accueil</a>
                 <a class="navbar" href="{% url 'about-site' %}">Nous connaître</a>
                 <a class="navbar" href="{% url 'project-site' %}">Notre projet</a>
                 <a class="navbar" href="{% url 'contact-site' %}">Nous contacter</a>
-            </nav>
+            </div>
+
         </header>
         
         {% block content %}{% endblock %}

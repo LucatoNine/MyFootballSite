@@ -49,6 +49,7 @@ body {
 
 /* LINKS */
 
+
 a:link, a:visited {
     color: var(--body-fg);
     text-decoration: none;
@@ -74,4 +75,24 @@ a.section:link, a.section:visited {
 
 a.section:focus, a.section:hover {
     text-decoration: underline;
+}
+
+/* SIDE NAV */ 
+
+.sidenav    {
+    width: all;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 55px;
+    border: 1px black solid; 
+    position: sticky;
+    text-align: center;
+    padding-top: 25px;
+    display: grid;
+
+}
+
+.navbar {
+    grid-row: 1;
 }
