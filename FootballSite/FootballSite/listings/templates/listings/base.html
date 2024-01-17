@@ -1,19 +1,22 @@
+{% load static %}
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>OurFootballSite</title>
-        <link href="https://github.com/LucatoNine/MyFootballSite/blob/main/FootballSite/FootballSite/listings/templates/listings/stylesheet/base.css" rel="stylesheet" type="text/css">
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
         
     </head>
 
     <body>
-
-        <nav>
-            <a href="{% url 'home-site' %}">Accueil</a>
-            <a href="{% url 'about-site' %}">Nous connaître</a>
-            <a href="{% url 'project-site' %}">Notre projet</a>
-            <a href="{% url 'contact-site' %}">Nous contacter</a>
-        </nav>
+        <header>
+            <nav>
+                <a class="navbar" href="{% url 'home-site' %}">Accueil</a>
+                <a class="navbar" href="{% url 'about-site' %}">Nous connaître</a>
+                <a class="navbar" href="{% url 'project-site' %}">Notre projet</a>
+                <a class="navbar" href="{% url 'contact-site' %}">Nous contacter</a>
+            </nav>
+        </header>
         
         {% block content %}{% endblock %}
 
