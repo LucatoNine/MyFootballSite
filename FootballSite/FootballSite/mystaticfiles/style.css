@@ -96,3 +96,45 @@ a.section:focus, a.section:hover {
 .navbar {
     grid-row: 1;
 }
+
+
+/* TEXT */
+
+.present1   {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 200px;
+    background-color: brown;
+    position: sticky;
+}
+
+
+.titl1  {
+    position: sticky;
+    margin: 30px;
+    background-color: lightblue;
+    width: 1000px;
+    height: 30px;
+    padding: 30px;
+    border-radius: 5%;
+    text-align: center;
+
+}
+
+.block1 {
+   
+    position: sticky;
+    grid-row: 1 / 1;
+    display: grid;
+}
+
+.paragr1    {
+    background-color: aquamarine;
+    width: 1000px;
+
+}
+
+.paragr2    {
+    background-color: blueviolet;
+    width: 1000px;
+}
