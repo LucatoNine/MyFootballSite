@@ -24,7 +24,10 @@ class Player(models.Model):
     
 # AUTHENTIFICATION
 class User(AbstractUser):
-    
+
+    username = None
+    USERNAME_FIELD = models.CharField(max_length=63)
+
     CREATOR = 'CREATOR'
     SUBSCRIBER = 'SUBSCRIBER'
 
