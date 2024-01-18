@@ -1,3 +1,23 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
+
+class Players(models.Model):
+
+    class Position(models.TextChoices):
+        DEFENSEUR = 'def'
+        MILIEU = 'mil'
+        ATTAQUANT = 'att'
+        GARDIEN = 'gk'
+
+    first_name = models.CharField(max_length=30)
+    second_name = models.CharField(max_length=30)
+    position = models.fields.CharField(choices=Position.choices, max_length=5)
+    year_old = models.fields.IntegerField(validators = [MinValueValidator(16), MaxValueValidator(45)])
+
+
+    def __str__(self):
+        return f'{self.first_name}'
+    
+    
