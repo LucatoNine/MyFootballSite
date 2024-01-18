@@ -1,9 +1,11 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
 
-class Players(models.Model):
+# CONTENU
+
+class Player(models.Model):
 
     class Position(models.TextChoices):
         DEFENSEUR = 'def'
@@ -19,5 +21,18 @@ class Players(models.Model):
 
     def __str__(self):
         return f'{self.first_name}'
+    
+# AUTHENTIFICATION
+class User(AbstractUser):
+    
+    CREATOR = 'CREATOR'
+    SUBSCRIBER = 'SUBSCRIBER'
+
+    ROLE_CHOICES = (
+        (CREATOR, 'Créateur'),
+        (SUBSCRIBER, 'Abonné'),
+    )
+    profile_photo = models.ImageField(verbose_name='Photo de profil')
+    role = models.CharField(max_length=30, choices=ROLE_CHOICES, verbose_name='Rôle')
     
     
